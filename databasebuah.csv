@@ -1,8 +1,4 @@
-Nama Responden (Pemilik Lahan)2,Lokasi RW,Nama buah,Varietas buah,"Status pohon  
-produktif: pernah berbuah minimal 1 kali dalam setahun
-belum produktif: tidak berbuah dalam 1 tahun","Usia tanaman (tahun)
-Usia tanaman yang tertanam di lahan saat ini.","Jumlah Populasi Tanaman
-Populasi tanaman dihitung berdasarkan jumlah total keseluruhan suatu jenis komoditas tanaman.",Status lahan  ,Sumber bibit
+Nama Pemilik Lahan,Lokasi RW,Nama buah,Varietas buah,"Status pohon","Usia tanaman (tahun)","Jumlah Populasi Tanaman",Status lahan  ,Sumber bibit
 Abdul Rohmat,RW 05,Nangka,Lokal,Produktif,50,50,Sewa,Biji
 Abdul Rohmat,RW 05,Durian,Lokal,Produktif,20,3,Milik Sendiri,Biji
 Abdul Wahid,RW 01,Durian,"Musangking, Montong",Belum Produktif,2,25,Milik Sendiri,Beli bibit
