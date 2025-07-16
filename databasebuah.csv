@@ -48,11 +48,9 @@ Fauzan,RW 02,Pisang,,Produktif,2,2,Milik Sendiri,Beli bibit
 Fauzan,RW 01,Durian,Montong,Belum Produktif,1,1,Milik Sendiri,Beli bibit
 Fauzan,RW 01,Pepaya,,Belum Produktif,0.5,2,Milik Sendiri,Beli bibit
 Fauzan,RW 01,Pisang,,Produktif,5,20,Milik Sendiri,Beli bibit
-"Fauzan
-",RW 01,Jambu Biji,,Produktif,2,1,Milik Sendiri,Beli bibit
-"Fauzan
-",RW 01,Alpukat,,Belum Produktif,3,2,Milik Sendiri,Biji
-ferry,RW 09,Alpukat ,"Miky, dan kendil dan peluang",Produktif,4,35,Bagi Hasil,Beli bibit
+Fauzan,RW 01,Jambu Biji,,Produktif,2,1,Milik Sendiri,Beli bibit
+Fauzan,RW 01,Alpukat,,Belum Produktif,3,2,Milik Sendiri,Biji
+Ferry,RW 09,Alpukat ,"Miky, dan kendil dan peluang",Produktif,4,35,Bagi Hasil,Beli bibit
 Ferry ,RW 09,Pepaya,"Thailand, California",Produktif,1,33,Bagi Hasil,Biji
 Ferry ,RW 09,Pisang,Pisang kepok pipit,Produktif,1,7,Bagi Hasil,Beli bibit
 Ferry ,RW 09,Mangga,Mangga alpukat,Produktif,3,2,Bagi Hasil,Beli bibit
@@ -94,7 +92,7 @@ Karoni,RW 05,Mangga,,Produktif,4,1,Milik Sendiri,Biji
 Karoni,RW 05,Alpukat,,Belum Produktif,4,1,Milik Sendiri,Biji
 Kastiyah,RW 02,Alpukat,,Produktif,5,2,Milik Sendiri,Beli bibit
 Kaswoto,RW 04,Nangka,,Produktif,3,5,Milik Sendiri,Beli bibit
-Kawoto,RW 04,Alpukat,,Produktif,3,3,Milik Sendiri,Beli bibit
+Kaswoto,RW 04,Alpukat,,Produktif,3,3,Milik Sendiri,Beli bibit
 M. Khamim,RW 02,Alpukat,"Alpukat Aligator, Alpukat Kendil, Alpukat Peluang",Produktif,0.5,40,Milik Sendiri,Biji
 M. Khamim,RW 02,Durian,Durian Montong,Produktif,10,30,Milik Sendiri,Biji
 M. Khamim,RW 02,Nangka,Nangka Madu,Produktif,5,15,Milik Sendiri,Biji
@@ -148,18 +146,18 @@ Sukar,RW 07,Durian,Durian Montong,Produktif,15,30,Milik Sendiri,Beli bibit
 Sukirno,RW 04,Mangga,Arumanis,Produktif,15,1,Milik Sendiri,Biji
 Sukirno,RW 04,Pisang,"Raja, pipit",Produktif,5,5,Milik Sendiri,Biji
 Sukirno,RW 04,Durian,Montong,Produktif,5,2,Milik Sendiri,Biji
-Sukirno ,RW 04,Alpukat,Mentega,Produktif,10,2,Milik Sendiri,Biji
+Sukirno,RW 04,Alpukat,Mentega,Produktif,10,2,Milik Sendiri,Biji
 Supari,RW 08,Durian,"Musang King, Bawor, Duri Hitam, Super Tembaga",Belum Produktif,3,30,Milik Sendiri,Grafting Okulasi
 Suparmin,RW 04,Durian,Montong,produktif,7,1,Milik Sendiri,Beli bibit
 Suparmin,RW 04,Alpukat,Kendil,Belum Produktif,1,2,Milik Sendiri,Grafting
 Suparmin,RW 04,Naga,Lokal,Produktif,1,2,Milik Sendiri,Stek batang
 Suprayitno,RW 07,Durian,,Produktif,14,9,Milik Sendiri,Beli bibit
 Suprayitno,RW 07,Alpukat,,Produktif,14,15,Milik Sendiri,Beli bibit
-Suprayitno ,RW 07,Durian,Durian montong,Produktif,14,7,Milik Sendiri,Beli bibit
+Suprayitno,RW 07,Durian,Durian montong,Produktif,14,7,Milik Sendiri,Beli bibit
 Sutarno,RW 07,Jeruk ,Manis dan kompon,Produktif,4,110,Milik Sendiri,Beli bibit
 Sutarno,RW 07,Nanas,Lokal,Produktif,10,50,Milik Sendiri,Beli bibit
 Sutarno,RW 07,Durian,"Musang king, bawor, duri hitam, montong",Produktif,20,15,Milik Sendiri,Beli bibit
-sutarno,RW 07,Alpukat,Pluwang,Produktif,10,10,Milik Sendiri,Beli bibit
+Sutarno,RW 07,Alpukat,Pluwang,Produktif,10,10,Milik Sendiri,Beli bibit
 Sutaryono,RW 08,Nanas,,Produktif,0.5,20,Milik Sendiri,Cangkok
 Sutaryono,RW 08,Rambutan,Bulus,Produktif,18,1,Milik Sendiri,Beli bibit
 Sutiman,RW 08,Alpukat,,Produktif,15,1,Milik Sendiri,Biji
@@ -175,8 +173,8 @@ Tarom,RW 03,Durian,Musang king,Produktif,12,5,Milik Sendiri,Beli bibit
 Tarom,RW 03,Pisang,"Rojo nongko, rojo ayu",Produktif,5,10,Milik Sendiri,Tunas
 Tuk Atik,RW 04,Alpukat ,,Produktif,5,5,Milik Sendiri,Beli bibit
 Tuk Atik,RW 04,Matoa ,,Produktif,10,1,Milik Sendiri,Beli bibit
-Tuk Atik ,RW 02,Pepaya,Lokal,Produktif dan Belum Produktif,1,7,Milik Sendiri,Biji
-Tunarsih ,RW 04,Nangka ,,Produktif,40,1,Milik Sendiri,Biji
+Tuk Atik,RW 02,Pepaya,Lokal,Produktif dan Belum Produktif,1,7,Milik Sendiri,Biji
+Tunarsih,RW 04,Nangka ,,Produktif,40,1,Milik Sendiri,Biji
 Turmudi,RW 09,Alpukat,Lokal,Belum Produktif,3,3,Milik Sendiri,Beli bibit
 Tutuk Puji Rahayu,RW 02,Alpukat,"Alpukat Aligator, Alpukat Mentega",Produktif,2,7,Milik Sendiri,Biji
 Tutuk Puji Rahayu,RW 02,Durian,"Durian Bawor, Durian Musang King",Belum Produktif,2,20,Milik Sendiri,Biji
