@@ -34,6 +34,8 @@ plt.style.use('default')
 sns.set_palette("husl")
 
 # Data populasi per buah (sesuaikan nama kolom)
+# Pastikan kolom populasi adalah numerik
+df[df.columns[2]] = pd.to_numeric(df[df.columns[2]], errors='coerce')
 populasi_per_buah = df.groupby(df.columns[1])[df.columns[2]].sum().sort_values(ascending=False)
 
 # Grafik
@@ -48,11 +50,12 @@ bars = ax.bar(
 )
 
 # Tambahkan label jumlah di atas bar
+max_value = populasi_per_buah.max()
 for bar in bars:
     height = bar.get_height()
     ax.text(
         bar.get_x() + bar.get_width()/2.,
-        height + max(populasi_per_buah.values)*0.01,
+        height + max_value*0.01,
         f'{int(height):,}',
         ha='center',
         va='bottom',
