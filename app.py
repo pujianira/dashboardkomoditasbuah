@@ -26,7 +26,7 @@ st.dataframe(df_grouped)
 st.subheader("📊 Grafik Populasi Tanaman per Jenis Buah")
 
 # Set style grafik
-plt.style.use('seaborn-v0_8')
+plt.style.use('default')
 sns.set_palette("husl")
 
 # Data populasi per buah
@@ -60,7 +60,7 @@ for bar in bars:
 ax.set_title("Jumlah Populasi Tanaman per Jenis Buah", fontsize=16, fontweight='bold', pad=20)
 ax.set_xlabel("Jenis Buah", fontsize=12, fontweight='bold')
 ax.set_ylabel("Jumlah Populasi", fontsize=12, fontweight='bold')
-ax.set_xticklabels(populasi_per_buah.index, rotation=45, ha='right')
+plt.xticks(rotation=45, ha='right')
 ax.grid(axis='y', alpha=0.3, linestyle='--')
 
 # Format angka y pakai koma
