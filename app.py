@@ -10,12 +10,16 @@ st.title("🍎 Dashboard Populasi Tanaman Buah")
 # Baca file langsung dari lokal (pastikan file ini ada di folder yang sama)
 df = pd.read_csv("databasebuah.csv")
 
+# Debug: tampilkan nama kolom yang tersedia
+st.write("Kolom yang tersedia:", df.columns.tolist())
+
 # Tampilkan tabel asli
 st.subheader("📄 Data Asli")
 st.dataframe(df)
 
-# Gabungkan buah per responden
-df_grouped = df.groupby("Nama Responden (Pemilik Lahan)")["Nama buah"]\
+# Gabungkan buah per responden (sesuaikan nama kolom dengan yang ada di CSV)
+# Ganti nama kolom sesuai dengan yang sebenarnya ada di file CSV
+df_grouped = df.groupby(df.columns[0])[df.columns[1]]\
     .apply(lambda x: ", ".join(sorted(set(x)))).reset_index()
 
 # Tampilkan tabel gabungan
@@ -29,8 +33,8 @@ st.subheader("📊 Grafik Populasi Tanaman per Jenis Buah")
 plt.style.use('default')
 sns.set_palette("husl")
 
-# Data populasi per buah
-populasi_per_buah = df.groupby("Nama buah")["Jumlah Populasi Tanaman"].sum().sort_values(ascending=False)
+# Data populasi per buah (sesuaikan nama kolom)
+populasi_per_buah = df.groupby(df.columns[1])[df.columns[2]].sum().sort_values(ascending=False)
 
 # Grafik
 fig, ax = plt.subplots(figsize=(12, 7))
