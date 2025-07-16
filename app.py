@@ -10,19 +10,12 @@ st.title("🍎 Dashboard Populasi Tanaman Buah")
 # Baca file langsung dari lokal (pastikan file ini ada di folder yang sama)
 df = pd.read_csv("databasebuah.csv")
 
-# Debug: tampilkan nama kolom yang tersedia
-st.write("Kolom yang tersedia:", df.columns.tolist())
-st.write("Shape data:", df.shape)
-st.write("Sample data:")
-st.write(df.head())
-
 # Tampilkan tabel asli
 st.subheader("📄 Data Asli")
 st.dataframe(df)
 
 # Gabungkan buah per responden (sesuaikan nama kolom dengan yang ada di CSV)
-# Ganti nama kolom sesuai dengan yang sebenarnya ada di file CSV
-df_grouped = df.groupby(df.columns[0])[df.columns[1]]\
+df_grouped = df.groupby("Nama Pemilik Lahan")["Nama buah"]\
     .apply(lambda x: ", ".join(sorted(set(x)))).reset_index()
 
 # Tampilkan tabel gabungan
@@ -37,17 +30,9 @@ plt.style.use('default')
 sns.set_palette("husl")
 
 # Data populasi per buah (sesuaikan nama kolom)
-# Debug: cek tipe data kolom
-st.write("Tipe data kolom ke-3:", df[df.columns[2]].dtype)
-st.write("Sample nilai kolom ke-3:", df[df.columns[2]].head())
-
 # Pastikan kolom populasi adalah numerik
-df[df.columns[2]] = pd.to_numeric(df[df.columns[2]], errors='coerce')
-populasi_per_buah = df.groupby(df.columns[1])[df.columns[2]].sum().sort_values(ascending=False)
-
-# Debug: cek hasil groupby
-st.write("Hasil groupby:")
-st.write(populasi_per_buah)
+df["Jumlah Populasi Tanaman"] = pd.to_numeric(df["Jumlah Populasi Tanaman"], errors='coerce')
+populasi_per_buah = df.groupby("Nama buah")["Jumlah Populasi Tanaman"].sum().sort_values(ascending=False)
 
 # Grafik
 fig, ax = plt.subplots(figsize=(12, 7))
