@@ -12,6 +12,9 @@ df = pd.read_csv("databasebuah.csv")
 
 # Debug: tampilkan nama kolom yang tersedia
 st.write("Kolom yang tersedia:", df.columns.tolist())
+st.write("Shape data:", df.shape)
+st.write("Sample data:")
+st.write(df.head())
 
 # Tampilkan tabel asli
 st.subheader("📄 Data Asli")
@@ -34,9 +37,17 @@ plt.style.use('default')
 sns.set_palette("husl")
 
 # Data populasi per buah (sesuaikan nama kolom)
+# Debug: cek tipe data kolom
+st.write("Tipe data kolom ke-3:", df[df.columns[2]].dtype)
+st.write("Sample nilai kolom ke-3:", df[df.columns[2]].head())
+
 # Pastikan kolom populasi adalah numerik
 df[df.columns[2]] = pd.to_numeric(df[df.columns[2]], errors='coerce')
 populasi_per_buah = df.groupby(df.columns[1])[df.columns[2]].sum().sort_values(ascending=False)
+
+# Debug: cek hasil groupby
+st.write("Hasil groupby:")
+st.write(populasi_per_buah)
 
 # Grafik
 fig, ax = plt.subplots(figsize=(12, 7))
