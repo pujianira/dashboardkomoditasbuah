@@ -3,44 +3,68 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Judul app
-st.title("📊 Dashboard Tanaman Buah")
+# Judul App
+st.set_page_config(page_title="Dashboard Buah", layout="wide")
+st.title("🍎 Dashboard Populasi Tanaman Buah")
 
-# Upload file CSV
-uploaded_file = st.file_uploader("Upload file CSV kamu", type="csv")
+# Baca file langsung dari lokal (pastikan file ini ada di folder yang sama)
+df = pd.read_csv("databasebuah.csv")
 
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
+# Tampilkan tabel asli
+st.subheader("📄 Data Asli")
+st.dataframe(df)
 
-    st.subheader("📄 Data Asli")
-    st.dataframe(df)
+# Gabungkan buah per responden
+df_grouped = df.groupby("Nama Responden (Pemilik Lahan)")["Nama buah"]\
+    .apply(lambda x: ", ".join(sorted(set(x)))).reset_index()
 
-    # Hitung populasi tanaman per jenis buah
-    populasi_per_buah = (
-        df.groupby("Nama buah")["Jumlah Populasi Tanaman"]
-        .sum()
-        .sort_values(ascending=False)
-        .reset_index()
+# Tampilkan tabel gabungan
+st.subheader("👨‍🌾 Buah yang Ditanam per Responden")
+st.dataframe(df_grouped)
+
+# Buat grafik populasi buah
+st.subheader("📊 Grafik Populasi Tanaman per Jenis Buah")
+
+# Set style grafik
+plt.style.use('seaborn-v0_8')
+sns.set_palette("husl")
+
+# Data populasi per buah
+populasi_per_buah = df.groupby("Nama buah")["Jumlah Populasi Tanaman"].sum().sort_values(ascending=False)
+
+# Grafik
+fig, ax = plt.subplots(figsize=(12, 7))
+bars = ax.bar(
+    populasi_per_buah.index,
+    populasi_per_buah.values,
+    color=plt.cm.Set3(range(len(populasi_per_buah))),
+    edgecolor='black',
+    linewidth=0.7,
+    alpha=0.8
+)
+
+# Tambahkan label jumlah di atas bar
+for bar in bars:
+    height = bar.get_height()
+    ax.text(
+        bar.get_x() + bar.get_width()/2.,
+        height + max(populasi_per_buah.values)*0.01,
+        f'{int(height):,}',
+        ha='center',
+        va='bottom',
+        fontweight='bold',
+        fontsize=10
     )
 
-    st.subheader("🍎 Jumlah Populasi per Jenis Buah")
+# Styling
+ax.set_title("Jumlah Populasi Tanaman per Jenis Buah", fontsize=16, fontweight='bold', pad=20)
+ax.set_xlabel("Jenis Buah", fontsize=12, fontweight='bold')
+ax.set_ylabel("Jumlah Populasi", fontsize=12, fontweight='bold')
+ax.set_xticklabels(populasi_per_buah.index, rotation=45, ha='right')
+ax.grid(axis='y', alpha=0.3, linestyle='--')
 
-    # Plot cantik
-    sns.set(style="whitegrid")
-    fig, ax = plt.subplots(figsize=(10, 6))
-    barplot = sns.barplot(
-        x="Jumlah Populasi Tanaman",
-        y="Nama buah",
-        data=populasi_per_buah,
-        palette="viridis",
-        ax=ax
-    )
+# Format angka y pakai koma
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x):,}'))
 
-    for i, v in enumerate(populasi_per_buah["Jumlah Populasi Tanaman"]):
-        ax.text(v + 1, i, str(v), color='black', va='center')
-
-    ax.set_title("Jumlah Populasi Tanaman per Jenis Buah", fontsize=16, weight='bold')
-    ax.set_xlabel("Jumlah Populasi")
-    ax.set_ylabel("Jenis Buah")
-
-    st.pyplot(fig)
+# Tampilkan di Streamlit
+st.pyplot(fig)
