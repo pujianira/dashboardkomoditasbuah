@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Judul App
-st.set_page_config(page_title="Dashboard Buah", layout="wide")
-st.title("Dashboard Populasi Tanaman Buah")
+st.set_page_config(page_title="Dashboard Komoditas Buah", layout="wide")
+st.title("Dashboard Komoditas Buah di Desa Kalisidi")
 
 df = pd.read_csv("databasebuah.csv")
 
