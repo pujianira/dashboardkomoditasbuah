@@ -9,11 +9,14 @@ st.title("Dashboard Komoditas Buah di Desa Kalisidi")
 
 df = pd.read_csv("databasebuah.csv")
 
-AgGrid(df, 
-       gridOptions=GridOptionsBuilder.from_dataframe(df)
-                   .configure_default_column(cellStyle={"textAlign": "center"})
-                   .build(), 
-       height=400)
+def create_centered_grid(df, height=400):
+    grid_opts = (GridOptionsBuilder.from_dataframe(df)
+                 .configure_default_column(cellStyle={"textAlign": "center"})
+                 .build())
+    return AgGrid(df, gridOptions=grid_opts, height=height)
+
+# Usage
+create_centered_grid(df)
 
 st.subheader("📄 Data Komoditas Buah")
 st.dataframe(df)
