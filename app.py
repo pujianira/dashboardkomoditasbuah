@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 st.set_page_config(page_title="Dashboard Komoditas Buah", layout="wide")
 st.title("Dashboard Komoditas Buah di Desa Kalisidi")
 
@@ -11,8 +12,18 @@ st.title("Dashboard Komoditas Buah di Desa Kalisidi")
 
 df = pd.read_csv("databasebuah.csv")
 
+from st_aggrid import AgGrid, GridOptionsBuilder
+
+gb = GridOptionsBuilder.from_dataframe(df)
+gb.configure_default_column(cellStyle={"textAlign": "center"})
+gridOptions = gb.build()
+
+AgGrid(df, gridOptions=gridOptions, height=400)
+
+
 st.subheader("📄 Data Komoditas Buah")
 st.dataframe(df)
+
 
 df_grouped = df.groupby("Nama Pemilik Lahan")["Nama Buah"]\
     .apply(lambda x: ", ".join(sorted(set(x)))).reset_index()
