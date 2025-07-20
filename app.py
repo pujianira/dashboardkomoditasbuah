@@ -9,63 +9,8 @@ st.title("Dashboard Komoditas Buah di Desa Kalisidi")
 
 df = pd.read_csv("databasebuah.csv")
 
-def create_centered_grid(df, height=400):
-    grid_opts = (GridOptionsBuilder.from_dataframe(df)
-                 .configure_default_column(cellStyle={"textAlign": "center"})
-                 .build())
-    return AgGrid(df, gridOptions=grid_opts, height=height)
-
-# Usage
-create_centered_grid(df)
-
 st.subheader("📄 Data Komoditas Buah")
 st.dataframe(df)
-
-# Convert ke HTML dengan style rata tengah
-html_table = df.to_html(index=False, classes="center-table", border=0)
-
-# CSS + Scroll Container
-st.markdown("""
-    <style>
-        .scroll-table-container {
-            max-height: 500px;
-            overflow-y: auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 10px;
-            background-color: #fff;
-        }
-
-        .center-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: auto;
-        }
-
-        .center-table th, .center-table td {
-            text-align: center;
-            padding: 8px;
-            border: 1px solid #ddd;
-        }
-
-        .center-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .center-table th {
-            background-color: #f0f2f6;
-            font-weight: bold;
-            position: sticky;
-            top: 0;
-            z-index: 1;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# Tampilkan judul dan tabel
-st.markdown("### 📄 Data Asli (Scroll + Rata Tengah)")
-st.markdown(f'<div class="scroll-table-container">{html_table}</div>', unsafe_allow_html=True)
-
 
 df_grouped = df.groupby("Nama Pemilik Lahan")["Nama Buah"]\
     .apply(lambda x: ", ".join(sorted(set(x)))).reset_index()
