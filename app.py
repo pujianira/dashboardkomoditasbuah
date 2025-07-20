@@ -3,12 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Judul App
 st.set_page_config(page_title="Dashboard Komoditas Buah", layout="wide")
 st.title("Dashboard Komoditas Buah di Desa Kalisidi")
 
-st.write("""
-Dashboard ini menampilkan data komoditas buah yang ditanam di Desa Kalisidi,""")
+# st.write("""
+# Dashboard ini menampilkan data komoditas buah yang ditanam di Desa Kalisidi,""")
 
 df = pd.read_csv("databasebuah.csv")
 
