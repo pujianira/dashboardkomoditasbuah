@@ -10,10 +10,39 @@ st.title("Dashboard Komoditas Buah di Desa Kalisidi")
 st.write("""
 Dashboard ini menampilkan data komoditas buah yang ditanam di Desa Kalisidi,""")
 
+# df = pd.read_csv("databasebuah.csv")
+
+# st.subheader("📄 Data Asli")
+# st.dataframe(df)
+
+import streamlit as st
+import pandas as pd
+
 df = pd.read_csv("databasebuah.csv")
 
-st.subheader("📄 Data Asli")
-st.dataframe(df)
+# Judul
+st.subheader("📄 Data Asli (Rata Tengah)")
+
+# Konversi DataFrame ke HTML dengan style rata tengah
+styled_html = df.to_html(index=False, justify='center')
+
+# Styling CSS: semua isi <td> dan <th> di tengah
+centered_html = f"""
+<style>
+    table {{
+        margin-left: auto;
+        margin-right: auto;
+    }}
+    th, td {{
+        text-align: center !important;
+    }}
+</style>
+{styled_html}
+"""
+
+# Tampilkan di Streamlit
+st.markdown(centered_html, unsafe_allow_html=True)
+
 
 df_grouped = df.groupby("Nama Pemilik Lahan")["Nama buah"]\
     .apply(lambda x: ", ".join(sorted(set(x)))).reset_index()
