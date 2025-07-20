@@ -21,8 +21,8 @@ st.subheader("📊 Grafik Populasi Tanaman per Jenis Buah")
 plt.style.use('default')
 sns.set_palette("husl")
 
-df["Jumlah Populasi"] = pd.to_numeric(df["Jumlah Populasi"], errors='coerce')
-populasi_per_buah = df.groupby("Nama Buah")["Jumlah Populasi"].sum().sort_values(ascending=False)
+df["Populasi"] = pd.to_numeric(df["Populasi"], errors='coerce')
+populasi_per_buah = df.groupby("Nama Buah")["Populasi"].sum().sort_values(ascending=False)
 
 fig, ax = plt.subplots(figsize=(12, 7))
 bars = ax.bar(
