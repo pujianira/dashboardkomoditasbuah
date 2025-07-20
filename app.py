@@ -14,7 +14,7 @@ df = pd.read_csv("databasebuah.csv")
 st.subheader("📄 Data Komoditas Buah")
 st.dataframe(df)
 
-df_grouped = df.groupby("Nama Pemilik Lahan")["Nama buah"]\
+df_grouped = df.groupby("Nama Pemilik Lahan")["Nama Buah"]\
     .apply(lambda x: ", ".join(sorted(set(x)))).reset_index()
 
 st.subheader("👨‍🌾 Buah yang Ditanam per Responden")
