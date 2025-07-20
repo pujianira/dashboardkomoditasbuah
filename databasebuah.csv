@@ -1,9 +1,9 @@
 Nama Pemilik Lahan,Lokasi RW,Nama Buah,Varietas Buah,"Status pohon","Usia Tanaman","Jumlah Populasi",Status Lahan,Sumber Bibit
 Abdul Rohmat,RW 05,Nangka,Lokal,Produktif,50,50,Sewa,Biji
 Abdul Rohmat,RW 05,Durian,Lokal,Produktif,20,3,Milik Sendiri,Biji
-Abdul Wahid,RW 01,Durian,"Musangking, Montong",Belum Produktif,2,25,Milik Sendiri,Beli bibit
+Abdul Wahid,RW 01,Durian,"Musang King, Montong",Belum Produktif,2,25,Milik Sendiri,Beli bibit
 Abdul Wahid,RW 01,Sawo,Lokal,Produktif,3,3,Milik Sendiri,Cangkok
-Abdul Wahid,RW 05,Durian,"Musangking, Montong",Belum Produktif,2,10,Milik Sendiri,Beli bibit
+Abdul Wahid,RW 05,Durian,"Musang King, Montong",Belum Produktif,2,10,Milik Sendiri,Beli bibit
 Abdullah,RW 06,Jeruk,Sunkist California,Belum Produktif,4,300,Milik Sendiri,Grafting
 Abdurrohim,RW 01,Durian,Bawor,Belum Produktif,15,30,Milik Sendiri,Beli bibit
 Abdurrohim,RW 01,Alpukat,,Belum Produktif,15,20,Milik Sendiri,Beli bibit
@@ -28,12 +28,12 @@ Ayu,RW 04,Belimbing,Lokal,Produktif,2,3,Milik Sendiri,Beli bibit
 Ayu,RW 04,Alpukat,Lokal,Produktif,7,8,Milik Sendiri,Beli bibit
 Ayu,RW 04,Jeruk,Lokal,Produktif,10,1,Milik Sendiri,Beli bibit
 Bedjo Asmudi,RW 07,Durian,"Lokal, Montong",Produktif,5,5,Milik Sendiri,Biji
-Bero Rohani,RW 03,Jeruk,"Jeruk Keprok, jeruk peras",Produktif,7,100,Milik Sendiri,Grafting
+Bero Rohani,RW 03,Jeruk,"Jeruk Keprok, Jeruk Peras",Produktif,7,100,Milik Sendiri,Grafting
 Bero Rohani,RW 03,Jambu,Jambu Kristal,Produktif,7,200,Milik Sendiri,Grafting
 Bero Rohani,RW 03,Durian,"Musang King, Bawor",Belum Produktif,2,20,Milik Sendiri,Subsidi Bibit
 Bero Rohani,RW 03,Pepaya,California,Produktif,2,20,Milik Sendiri,Beli bibit
 Devia,RW 02,Alpukat,Miki,Produktif,2,5,Milik Sendiri,Beli bibit
-Devia,RW 02,Jeruk,Lemon, Nipis,Produktif,1,8,Milik Sendiri,Beli bibit
+Devia,RW 02,Jeruk,"Lemon, Nipis",Produktif,1,8,Milik Sendiri,Beli bibit
 Dimas Prayitno,RW 05,Durian,Montong,Produktif,4,30,Milik Sendiri,Beli bibit
 Dirman,RW 04,Durian,"Montong, Matahari, Musang King, Duri Hitam",Produktif,15,27,Milik Sendiri,Bibit sambung
 Dirman,RW 04,Jeruk,Jepun,Produktif,12,50,Milik Sendiri,Beli bibit
@@ -55,7 +55,7 @@ Ferry,RW 09,Pepaya,"Thailand, California",Produktif,1,33,Bagi Hasil,Biji
 Ferry,RW 09,Pisang,Kepok Pipit,Produktif,1,7,Bagi Hasil,Beli bibit
 Ferry,RW 09,Mangga,Mangga Alpukat,Produktif,3,2,Bagi Hasil,Beli bibit
 Ferry,RW 09,Jeruk,Lokal,Produktif,3,4,Bagi Hasil,Beli bibit
-Ferry,RW 09,Nanas,Madu, Batu,Produktif,4,30,sewa,Stek
+Ferry,RW 09,Nanas,"Madu, Batu",Produktif,4,30,Sewa,Stek
 Ferry,RW 09,Durian,"Lokal, Musang King",Produktif,10,3,sewa,Beli bibit
 Goldin Reza Asriandro,RW 02,Durian,,Belum Produktif,0.3,4,Milik Sendiri,Beli bibit
 Goldin Reza Asriandro,RW 02,Alpukat,,Belum Produktif,0.3,6,Milik Sendiri,Beli bibit
@@ -93,7 +93,7 @@ Karoni,RW 05,Alpukat,,Belum Produktif,4,1,Milik Sendiri,Biji
 Kastiyah,RW 02,Alpukat,,Produktif,5,2,Milik Sendiri,Beli bibit
 Kaswoto,RW 04,Nangka,,Produktif,3,5,Milik Sendiri,Beli bibit
 Kaswoto,RW 04,Alpukat,,Produktif,3,3,Milik Sendiri,Beli bibit
-M. Khamim,RW 02,Alpukat,"Aligator,Kendil,Peluang",Produktif,0.5,40,Milik Sendiri,Biji
+M. Khamim,RW 02,Alpukat,"Aligator, Kendil, Peluang",Produktif,0.5,40,Milik Sendiri,Biji
 M. Khamim,RW 02,Durian,Montong,Produktif,10,30,Milik Sendiri,Biji
 M. Khamim,RW 02,Nangka,Madu,Produktif,5,15,Milik Sendiri,Biji
 Maria Kristina,RW 04,Belimbing,,Produktif,10,1,Milik Sendiri,Beli bibit
@@ -148,7 +148,7 @@ Sukirno,RW 04,Pisang,"Raja, Pipit",Produktif,5,5,Milik Sendiri,Biji
 Sukirno,RW 04,Durian,Montong,Produktif,5,2,Milik Sendiri,Biji
 Sukirno,RW 04,Alpukat,Mentega,Produktif,10,2,Milik Sendiri,Biji
 Supari,RW 08,Durian,"Musang King, Bawor, Duri Hitam, Super Tembaga",Belum Produktif,3,30,Milik Sendiri,Grafting Okulasi
-Suparmin,RW 04,Durian,Montong,produktif,7,1,Milik Sendiri,Beli bibit
+Suparmin,RW 04,Durian,Montong,Produktif,7,1,Milik Sendiri,Beli bibit
 Suparmin,RW 04,Alpukat,Kendil,Belum Produktif,1,2,Milik Sendiri,Grafting
 Suparmin,RW 04,Naga,Lokal,Produktif,1,2,Milik Sendiri,Stek batang
 Suprayitno,RW 07,Durian,,Produktif,14,9,Milik Sendiri,Beli bibit
@@ -172,7 +172,7 @@ Tarom,RW 03,Alpukat,Peluang,Produktif,7,15,Milik Sendiri,"Biji, Okulasi"
 Tarom,RW 03,Durian,Musang King,Produktif,12,5,Milik Sendiri,Beli bibit
 Tarom,RW 03,Pisang,"Raja Nangka, Raja Ayu",Produktif,5,10,Milik Sendiri,Tunas
 Tuk Atik,RW 04,Alpukat,,Produktif,5,5,Milik Sendiri,Beli bibit
-Tuk Atik,RW 04,Matoa ,,Produktif,10,1,Milik Sendiri,Beli bibit
+Tuk Atik,RW 04,Matoa,,Produktif,10,1,Milik Sendiri,Beli bibit
 Tuk Atik,RW 02,Pepaya,Lokal,Produktif dan Belum Produktif,1,7,Milik Sendiri,Biji
 Tunarsih,RW 04,Nangka,,Produktif,40,1,Milik Sendiri,Biji
 Turmudi,RW 09,Alpukat,Lokal,Belum Produktif,3,3,Milik Sendiri,Beli bibit
