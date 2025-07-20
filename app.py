@@ -20,34 +20,34 @@ st.subheader("📄 Data Komoditas Buah")
 st.dataframe(df)
 
 # Convert DataFrame ke HTML dengan style center
-html_table = df.to_html(index=False, classes="center-table", border=0)
+# html_table = df.to_html(index=False, classes="center-table", border=0)
 
 # CSS untuk styling
-st.markdown("""
-    <style>
-        .center-table {
-            margin-left: auto;
-            margin-right: auto;
-            border-collapse: collapse;
-            width: 90%;
-        }
-        .center-table th, .center-table td {
-            text-align: center;
-            padding: 8px;
-            border: 1px solid #ddd;
-        }
-        .center-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .center-table th {
-            background-color: #f0f2f6;
-            font-weight: bold;
-        }
-    </style>
-""", unsafe_allow_html=True)
+# st.markdown("""
+#     <style>
+#         .center-table {
+#             margin-left: auto;
+#             margin-right: auto;
+#             border-collapse: collapse;
+#             width: 90%;
+#         }
+#         .center-table th, .center-table td {
+#             text-align: center;
+#             padding: 8px;
+#             border: 1px solid #ddd;
+#         }
+#         .center-table tr:nth-child(even) {
+#             background-color: #f9f9f9;
+#         }
+#         .center-table th {
+#             background-color: #f0f2f6;
+#             font-weight: bold;
+#         }
+#     </style>
+# """, unsafe_allow_html=True)
 
-st.markdown("### 📄 Data Asli (Rata Tengah & Rapi)")
-st.markdown(html_table, unsafe_allow_html=True)
+# st.markdown("### 📄 Data Asli (Rata Tengah & Rapi)")
+# st.markdown(html_table, unsafe_allow_html=True)
 
 df_grouped = df.groupby("Nama Pemilik Lahan")["Nama Buah"]\
     .apply(lambda x: ", ".join(sorted(set(x)))).reset_index()
