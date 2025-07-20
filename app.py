@@ -4,17 +4,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from st_aggrid import AgGrid, GridOptionsBuilder
 
-# pe
 st.set_page_config(page_title="Dashboard Komoditas Buah", layout="wide")
 st.title("Dashboard Komoditas Buah di Desa Kalisidi")
 
 df = pd.read_csv("databasebuah.csv")
 
-gb = GridOptionsBuilder.from_dataframe(df)
-gb.configure_default_column(cellStyle={"textAlign": "center"})
-gridOptions = gb.build()
-
-AgGrid(df, gridOptions=gridOptions, height=400)
+AgGrid(df, 
+       gridOptions=GridOptionsBuilder.from_dataframe(df)
+                   .configure_default_column(cellStyle={"textAlign": "center"})
+                   .build(), 
+       height=400)
 
 st.subheader("📄 Data Komoditas Buah")
 st.dataframe(df)
